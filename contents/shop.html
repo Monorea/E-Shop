@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Navigation-bar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style1.css" type="text/css" />
+    <link href="../fonts/fontawesome-webfont.svg" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="psg.jpg">
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Your Order</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                    <div>Total price: $<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="clear-cart btn btn-danger">Clear Cart</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Order now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Back to top button -->
+    <a id="gotop"></a>
+    <div class="containers">
+        <!--Section Serach-->
+        <section>
+            <div class="top-site">
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Bluestar_%28bus_company%29_logo.svg/1280px-Bluestar_%28bus_company%29_logo.svg.png" alt="Company Logo">
+                </div>
+
+
+                <div class="searchs">
+                    <form method="GET" action="/search" class="e-z" data-search-container="true" role="search">
+                        <input type="search" name="term" id="searchAll" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-expanded="false" value="" placeholder="Search for shoes, clothes, etc." accesskey="s" autocomplete="off">
+                        <label for="searchAll">Search for shoes, clothes, etc.</label>
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+
+
+                <div class="cart-list">
+                    <div class="user">
+                        <div class="message">
+                            <div class="sc-hd-icon-container"><a href="Login.html" data-val="message" target="" title="Sign In"><i class="far fa-user"></i></a></div>
+                            <div class="sc-hd-text-container"><a href="Login.html" target="" title="Sign In">Sign In</a></div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="message">
+                            <div class="sc-hd-icon-container"><a href="#" data-val="message" target="" title="Messages"><i class="far fa-comment-alt-dots"></i></a></div>
+                            <div class="sc-hd-text-container"><a href="#" target="" title="Messages">Messages</a></div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="message">
+                            <div class="sc-hd-icon-container"><a href="#" data-val="message" data-toggle="modal" data-target="#cart" title="Carts"><i class="far fa-shopping-cart"></i><span class="total-count">0</span></a></div>
+                            <div class="sc-hd-text-container"><a href="#" target="" title="Carts">Cart</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Child nav-->
+        <div class="child-nav child"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Shop</strong></div>
+        <!--Child nav-->
+        <!--================Product List====================-->
+
+
+        <div class="columns-1">
+            <div class="cols cols-1 border rounded p-4 ">
+                <h1>Categories</h1>
+                <ul>
+                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Nike</a></li>
+                    <li><a href="#">Adidas</a></li>
+                    <li><a href="#">Puma</a></li>
+                    <li><a href="#">Sneaker</a></li>
+                </ul>
+            </div>
+            <div class="cols cols-2">
+                <h1>Best Sellers</h1>
+
+                <div class="products-container">
+                    <div class="product-items">
+                        <img src="../images/away.webp">
+                        <span class="product-catagory" id="pro-name">PSG Away kit</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>$16.00</small>$13.99</div>
+                            <div class="product-links">
+                                <a href=""><i class="fa fa-heart"></i></a>
+                                <a href="product.html"><i class="fa fa-eye"></i></a>
+                                <a href="#" data-name="PSG" data-price="15" class="add-to-cart"><i class="fa fa-shopping-cart" title="Add to cart"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-items">
+                        <img src="../images/Mencity.jpg">
+                        <span class="product-catagory">Men City Home Kit</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>$16.00</small>$13.99</div>
+                            <div class="product-links">
+                                <a href=""><i class="fa fa-heart"></i></a>
+                                <a href="product.html"><i class="fa fa-eye"></i></a>
+                                <a href="#" data-name="MenCity" data-price="13.99" class="add-to-cart"><i class="fa fa-shopping-cart" title="Add to cart"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-items">
+                        <img src="../images/munich.webp">
+                        <span class="product-catagory">Bayern Away Kit</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>$16.00</small>$13.99</div>
+                            <div class="product-links">
+                                <a href=""><i class="fa fa-heart"></i></a>
+                                <a href="product.html"><i class="fa fa-eye"></i></a>
+                                <a href="#" data-name="Bayern" data-price="13.99" class="add-to-cart"><i class="fa fa-shopping-cart" title="Add to cart"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-container">
+                    <div class="product-items">
+                        <img src="../images/Pumaa.jpg">
+                        <span class="product-catagory">Real Madrid Home Kit</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>$16.00</small>$13.99</div>
+                            <div class="product-links">
+                                <a href=""><i class="fa fa-heart"></i></a>
+                                <a href="product.html"><i class="fa fa-eye"></i></a>
+                                <a href="#" data-name="RealMadrid" data-price="13.99" class="add-to-cart"><i class="fa fa-shopping-cart" title="Add to cart"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-items">
+                        <img src="../images/bayern.jpg">
+                        <span class="product-catagory">Bayern Home Kit</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>$16.00</small>$13.99</div>
+                            <div class="product-links">
+                                <a href=""><i class="fa fa-heart"></i></a>
+                                <a href="product.html"><i class="fa fa-eye"></i></a>
+                                <a href="#" data-name="Bayern" data-price="13.99" class="add-to-cart"><i class="fa fa-shopping-cart" title="Add to cart"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-items">
+                        <img src="../images/liverpool.jpg">
+                        <span class="product-catagory">Liverpool Home Kit</span>
+                        <div class="product-bottom-details">
+                            <div class="product-price"><small>$15.00</small>$13.99</div>
+                            <div class="product-links">
+                                <a href=""><i class="fa fa-heart"></i></a>
+                                <a href="product.html"><i class="fa fa-eye"></i></a>
+                                <a href="#" data-name="Liverpoll" data-price="13.99" class="add-to-cart"><i class="fa fa-shopping-cart" title="Add to cart"></i></a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--Promotion-->
+        <div class="promotion-container">
+            <div class="promotion">
+                <img src="../images/dis.jpg">
+            </div>
+            <div class="promotion">
+                <img src="../images/discount.jpg">
+            </div>
+        </div>
+        <!--End Promotion-->
+        <!--================End Product List====================-->
+        <div id="product-slides">
+
+            <div id="slider-containers">
+                <h2>New Feature<span onclick="slideLeft()" class="clickleft"><ion-icon name="chevron-forward-outline"></ion-icon></span><span onclick="slideRight()" class="clickright"><ion-icon name="chevron-back-outline"></ion-icon></span></h2>
+                <!-- <span onclick="slideRight()" class="btn"></span>
+                <span onclick="slideLeft()" class="btn"></span>-->
+
+                <div id="sliders">
+                    <div class="slides"><span><img src="../images/away.webp"></span>
+                        <h5>Nike</h5>
+                    </div>
+                    <div class="slides"><span><img src="../images/bayern.jpg"></span>
+                        <h5>Nike</h5>
+                    </div>
+                    <div class="slides"><span><img src="../images/liverpool.jpg"></span>
+                        <h5>Nike</h5>
+                    </div>
+                    <div class="slides"><span><img src="../images/Mencity.jpg"></span>
+                        <h5>Nike</h5>
+                    </div>
+                    <div class="slides"><span><img src="m.webp"></span>
+                        <h5>Nike</h5>
+                    </div>
+                    <div class="slides"><span><img src="../images/adidas.png"></span>
+                        <h5>Nike</h5>
+                    </div>
+                    <div class="slides"><span><img src="../images/adidas.png"></span>
+                        <h5>Nike</h5>
+                    </div>
+                    <div class="slides"><span><img src="../images/adidas.png"></span>
+                        <h5>Nike</h5>
+                    </div>
+                    <div class="slides"><span><img src="../images/adidas.png"></span>
+                        <h5>Nike</h5>
+                    </div>
+                    <div class="slides"><span><img src="../images/adidas.png"></span>
+                        <h5>Nike</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Footer Block-->
+        <footer class="footer">
+            <div class="foot-left">
+                <h2>
+                    <a href="#">ALIRIKA</a>
+                </h2>
+                <h4>catch on socail</h4>
+                <ul class="social_list">
+
+                    <li>
+                        <a href="#" class="facebook">
+                            <span><i class="fab fa-instagram"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="twitter">
+                            <span><i class="fab fa-twitter"></i></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="google">
+                            <span><i class="fab fa-instagram"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3>NEWSLETTER</h3>
+                <input type="email" placeholder="Enter your E-mail...">
+                <button class="btn1"><i class="far fa-paper-plane"></i></button>
+
+                <div class="foot-container">
+                    <div class="info">
+                        <h4>INFORMATION</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h4>CUSTOMER SERVICE</h4>
+                        <ul>
+                            <li><a href="#">Delivery & Return</a></li>
+                            <li><a href="#">Waranty</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h4>CONTACT INFO</h4>
+                        <ul>
+                            <li>PHONE<br> 096 7772667</li>
+                            <li>E-mail<br><a href="#">sinmonorea.edu@gmail.com</a>
+                            </li>
+                            <li>LOCATION<br>
+                                <a href="#">Phnom Penh City</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="copy">
+                    © 2020. All rights reserved | Design by <a href="#"> SIN MONOREA</a>
+
+                </div>
+
+            </div>
+
+        </footer>
+        <!--End Footer-->
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    $("#search-icon").click(function() {
+        $(".nav").toggleClass("search");
+        $(".nav").toggleClass("no-search");
+        $(".search-input").toggleClass("search-active");
+    });
+
+    $('.menu-toggle').click(function() {
+        $(".nav").toggleClass("mobile-nav");
+        $(this).toggleClass("is-active");
+    });
+
+    var btn = $('#gotop');
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, '300');
+    });
+    //Add to cart
+    var shoppingCart = (function() {
+        // =============================
+        // Private methods and propeties
+        // =============================
+        cart = [];
+
+        // Constructor
+        function Item(name, price, count) {
+            this.name = name;
+            this.price = price;
+            this.count = count;
+        }
+
+        // Save cart
+        function saveCart() {
+            sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+        }
+
+        // Load cart
+        function loadCart() {
+            cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+        }
+        if (sessionStorage.getItem("shoppingCart") != null) {
+            loadCart();
+        }
+
+
+        // =============================
+        // Public methods and propeties
+        // =============================
+        var obj = {};
+
+        // Add to cart
+        obj.addItemToCart = function(name, price, count) {
+                for (var item in cart) {
+                    if (cart[item].name === name) {
+                        cart[item].count++;
+                        saveCart();
+                        return;
+                    }
+                }
+                var item = new Item(name, price, count);
+                cart.push(item);
+                saveCart();
+            }
+            // Set count from item
+        obj.setCountForItem = function(name, count) {
+            for (var i in cart) {
+                if (cart[i].name === name) {
+                    cart[i].count = count;
+                    break;
+                }
+            }
+        };
+        // Remove item from cart
+        obj.removeItemFromCart = function(name) {
+            for (var item in cart) {
+                if (cart[item].name === name) {
+                    cart[item].count--;
+                    if (cart[item].count === 0) {
+                        cart.splice(item, 1);
+                    }
+                    break;
+                }
+            }
+            saveCart();
+        }
+
+        // Remove all items from cart
+        obj.removeItemFromCartAll = function(name) {
+            for (var item in cart) {
+                if (cart[item].name === name) {
+                    cart.splice(item, 1);
+                    break;
+                }
+            }
+            saveCart();
+        }
+
+        // Clear cart
+        obj.clearCart = function() {
+            cart = [];
+            saveCart();
+        }
+
+        // Count cart 
+        obj.totalCount = function() {
+            var totalCount = 0;
+            for (var item in cart) {
+                totalCount += cart[item].count;
+            }
+            return totalCount;
+        }
+
+        // Total cart
+        obj.totalCart = function() {
+            var totalCart = 0;
+            for (var item in cart) {
+                totalCart += cart[item].price * cart[item].count;
+            }
+            return Number(totalCart.toFixed(2));
+        }
+
+        // List cart
+        obj.listCart = function() {
+            var cartCopy = [];
+            for (i in cart) {
+                item = cart[i];
+                itemCopy = {};
+                for (p in item) {
+                    itemCopy[p] = item[p];
+
+                }
+                itemCopy.total = Number(item.price * item.count).toFixed(2);
+                cartCopy.push(itemCopy)
+            }
+            return cartCopy;
+        }
+
+        // cart : Array
+        // Item : Object/Class
+        // addItemToCart : Function
+        // removeItemFromCart : Function
+        // removeItemFromCartAll : Function
+        // clearCart : Function
+        // countCart : Function
+        // totalCart : Function
+        // listCart : Function
+        // saveCart : Function
+        // loadCart : Function
+        return obj;
+    })();
+
+
+    // *****************************************
+    // Triggers / Events
+    // ***************************************** 
+    // Add item
+    $('.add-to-cart').click(function(event) {
+        event.preventDefault();
+        var name = $(this).data('name');
+        var price = Number($(this).data('price'));
+        shoppingCart.addItemToCart(name, price, 1);
+        displayCart();
+    });
+
+    // Clear items
+    $('.clear-cart').click(function() {
+        shoppingCart.clearCart();
+        displayCart();
+    });
+
+
+    function displayCart() {
+        var cartArray = shoppingCart.listCart();
+        var output = "";
+        for (var i in cartArray) {
+            output += "<tr>" +
+                "<td>" + cartArray[i].name + "</td>" +
+                "<td>(" + cartArray[i].price + ")</td>" +
+                "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>" +
+                "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>" +
+                "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>" +
+                "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>" +
+                " = " +
+                "<td>" + cartArray[i].total + "</td>" +
+                "</tr>";
+        }
+        $('.show-cart').html(output);
+        $('.total-cart').html(shoppingCart.totalCart());
+        $('.total-count').html(shoppingCart.totalCount());
+    }
+
+    // Delete item button
+
+    $('.show-cart').on("click", ".delete-item", function(event) {
+        var name = $(this).data('name')
+        shoppingCart.removeItemFromCartAll(name);
+        displayCart();
+    })
+
+
+    // -1
+    $('.show-cart').on("click", ".minus-item", function(event) {
+            var name = $(this).data('name')
+            shoppingCart.removeItemFromCart(name);
+            displayCart();
+        })
+        // +1
+    $('.show-cart').on("click", ".plus-item", function(event) {
+        var name = $(this).data('name')
+        shoppingCart.addItemToCart(name);
+        displayCart();
+    })
+
+    // Item count input
+    $('.show-cart').on("change", ".item-count", function(event) {
+        var name = $(this).data('name');
+        var count = Number($(this).val());
+        shoppingCart.setCountForItem(name, count);
+        displayCart();
+    });
+
+    displayCart();
+
+    /*========Page Shop==============*/
+    var container = document.getElementById('product-slides')
+    var slider = document.getElementById('sliders');
+    var slides = document.getElementsByClassName('slides').length;
+    var buttons = document.getElementsByClassName('btn');
+
+
+    var currentPosition = 0;
+    var currentMargin = 0;
+    var slidesPerPage = 0;
+    var slidesCount = slides - slidesPerPage;
+    var containerWidth = container.offsetWidth;
+    var prevKeyActive = false;
+    var nextKeyActive = true;
+
+    window.addEventListener("resize", checkWidth);
+
+    function checkWidth() {
+        containerWidth = container.offsetWidth;
+        setParams(containerWidth);
+    }
+
+    function setParams(w) {
+        if (w < 551) {
+            slidesPerPage = 1;
+        } else {
+            if (w < 901) {
+                slidesPerPage = 2;
+            } else {
+                if (w < 1101) {
+                    slidesPerPage = 3;
+                } else {
+                    slidesPerPage = 4;
+                }
+            }
+        }
+        slidesCount = slides - slidesPerPage;
+        if (currentPosition > slidesCount) {
+            currentPosition -= slidesPerPage;
+        };
+        currentMargin = -currentPosition * (100 / slidesPerPage);
+        slider.style.marginLeft = currentMargin + '%';
+        if (currentPosition > 0) {
+            buttons[0].classList.remove('inactive');
+        }
+        if (currentPosition < slidesCount) {
+            buttons[1].classList.remove('inactive');
+        }
+        if (currentPosition >= slidesCount) {
+            buttons[1].classList.add('inactive');
+        }
+    }
+
+    setParams();
+
+    function slideRight() {
+
+        if (currentPosition != 0) {
+            slider.style.marginLeft = currentMargin + (100 / slidesPerPage) + '%';
+            currentMargin += (100 / slidesPerPage);
+            currentPosition--;
+        };
+        if (currentPosition === 0) {
+            buttons[0].classList.add('inactive');
+        }
+        if (currentPosition < slidesCount) {
+            buttons[1].classList.remove('inactive');
+        }
+    };
+
+    function slideLeft() {
+
+        if (currentPosition != slidesCount) {
+            slider.style.marginLeft = currentMargin - (100 / slidesPerPage) + '%';
+            currentMargin -= (100 / slidesPerPage);
+            currentPosition++;
+        };
+        if (currentPosition == slidesCount) {
+            buttons[1].classList.add('inactive');
+        }
+        if (currentPosition > 0) {
+            buttons[0].classList.remove('inactive');
+        }
+    };
+</script>

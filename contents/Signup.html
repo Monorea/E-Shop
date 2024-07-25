@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style1.css" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+
+    <link href="../fonts/fontawesome-webfont.svg" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="psg.jpg">
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                    <div>Total price: $<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="clear-cart btn btn-danger">Clear Cart</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Order now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Back to top button -->
+    <a id="gotop"></a>
+    <div class="containers">
+
+        <!--Child nav-->
+        <div class="child-nav child"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Sign Up</strong></div>
+        <!--Child nav-->
+        <!--================Product List====================-->
+
+
+        <main>
+            <div class="oe_website_login_container">
+                <form class="oe_signup_form" role="form" method="post">
+                    <input type="hidden" name="csrf_token" value="45fa95ee72bb9a17a94d45df5f8d50ed22f34333o1655185555">
+                    <h1 class="a-spacing-small">Create account</h1>
+                    <div class="form-groups field-login">
+                        <label for="login">Your Email</label>
+                        <input type="text" name="login" id="login" class="form-controls form-controls-sm" autofocus="autofocus" autocapitalize="none" required="required">
+                    </div>
+
+                    <div class="form-groups field-name">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" id="name" class="form-controls form-controls-sm" placeholder="" required="required">
+                    </div>
+
+                    <div class="form-groups field-password pt-2">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" placeholder="At least 6 characters" id="password" class="form-controls form-controls-sm" required="required">
+                    </div>
+
+                    <div class="form-groups field-confirm_password">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" name="confirm_password" id="confirm_password" class="form-controls form-controls-sm" required="required">
+                    </div>
+
+
+
+                    <input type="hidden" name="redirect">
+                    <input type="hidden" name="token">
+                    <div class="text-center oe_login_buttons pt-3">
+                        <button type="submit" class="btnLogin">Create Your Account</button>
+                        <div class="justify-content-between mt-2 d-flex small kk">
+                            <a href="Login.html">Already have an account? Sign-In</a>
+                        </div>
+                        <div class="o_login_auth"></div>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!--================End Product List====================-->
+
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    $("#search-icon").click(function() {
+        $(".nav").toggleClass("search");
+        $(".nav").toggleClass("no-search");
+        $(".search-input").toggleClass("search-active");
+    });
+
+    $('.menu-toggle').click(function() {
+        $(".nav").toggleClass("mobile-nav");
+        $(this).toggleClass("is-active");
+    });
+
+
+    //Goto_top
+    var btn = $('#gotop');
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, '300');
+    });
+</script>

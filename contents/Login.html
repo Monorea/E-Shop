@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign-In</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style1.css" type="text/css" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="psg.jpg">
+    <link href="../fonts/fontawesome-webfont.svg" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="containers">
+        <!--Child nav-->
+        <div class="child-nav child"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Signin</strong></div>
+        <!--Child nav-->
+        <!--================Product List====================-->
+
+
+        <main>
+            <div class="oe_website_login_container">
+                <form class="oe_login_form" role="form" method="post" onsubmit="if (!window.__cfRLUnblockHandlers) return false; this.action = '/web/login' + location.hash" action="/web/login">
+                    <input type="hidden" name="csrf_token" value="bf6531ca92b42ecee09965c4f6c753dc9c56512eo1655180190">
+                    <h1 class="a-spacing-small">Sign-In</h1>
+
+                    <div class="form-groups field-login">
+                        <label for="login">Email</label>
+                        <input type="text" placeholder="Email" name="login" id="login" required="required" autofocus="autofocus" autocapitalize="none" class="form-controls ">
+                    </div>
+
+                    <div class="form-groups field-password">
+                        <label for="password">Password</label>
+                        <input type="password" placeholder="Password" name="password" id="password" required="required" autocomplete="current-password" maxlength="4096" class="form-controls ">
+                        <a href="/web/reset_password">Forgot Password?</a>
+
+                    </div>
+
+
+
+                    <div class="clearfix oe_login_buttons text-center mb-1 pt-3">
+
+                        <button type="submit" name="login" class="btnLogin">Sign-In</button>
+                        <div class="justify-content-between mt-2 d-flex small">
+                            <!--<a href="Signup.html">Don't have an account?</a>-->
+
+                        </div>
+
+                        <div class="a-divider a-divider-break">
+                            <h5>New to Zappos?</h5>
+                        </div>
+                        <button type="submit" name="login" class="btnLogin btnCreate"><a href="Signup.html">Create your account</a></button>
+                        <div class="o_login_auth"></div>
+                    </div>
+
+                    <input type="hidden" name="redirect">
+                </form>
+            </div>
+        </main>
+
+        <!--================End Product List====================-->
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    $("#search-icon").click(function() {
+        $(".nav").toggleClass("search");
+        $(".nav").toggleClass("no-search");
+        $(".search-input").toggleClass("search-active");
+    });
+
+    $('.menu-toggle').click(function() {
+        $(".nav").toggleClass("mobile-nav");
+        $(this).toggleClass("is-active");
+    });
+
+    //Goto_top
+    var btn = $('#gotop');
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, '300');
+    });
+</script>

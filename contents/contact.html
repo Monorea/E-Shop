@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Navigation-bar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style1.css" type="text/css" />
+    <link href="../fonts/fontawesome-webfont.svg" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="psg.jpg">
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    <table class="show-cart table">
+
+                    </table>
+                    <div>Total price: $<span class="total-cart"></span></div>
+                </div>
+                <div class="modal-footer">
+                    <button class="clear-cart btn btn-danger">Clear Cart</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Order now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Back to top button -->
+    <a id="gotop"></a>
+    <div class="containers">
+
+        <!--Section Search-->
+        <section>
+            <div class="top-site">
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Bluestar_%28bus_company%29_logo.svg/1280px-Bluestar_%28bus_company%29_logo.svg.png" alt="Company Logo">
+                </div>
+
+
+                <div class="searchs">
+                    <form method="GET" action="/search" class="e-z" data-search-container="true" role="search">
+                        <input type="search" name="term" id="searchAll" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-expanded="false" value="" placeholder="Search for shoes, clothes, etc." accesskey="s" autocomplete="off">
+                        <label for="searchAll">Search for shoes, clothes, etc.</label>
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+
+
+                <div class="cart-list">
+                    <div class="user">
+                        <div class="message">
+                            <div class="sc-hd-icon-container"><a href="Login.html" data-val="message" target="" title="Sign In"><i class="far fa-user"></i></a></div>
+                            <div class="sc-hd-text-container"><a href="Login.html" target="" title="Sign In">Sign In</a></div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="message">
+                            <div class="sc-hd-icon-container"><a href="#" data-val="message" target="" title="Messages"><i class="far fa-comment-alt-dots"></i></a></div>
+                            <div class="sc-hd-text-container"><a href="#" target="" title="Messages">Messages</a></div>
+                        </div>
+                    </div>
+                    <div class="user">
+                        <div class="message">
+                            <div class="sc-hd-icon-container"><a href="#" data-val="message" data-toggle="modal" data-target="#cart" title="Carts"><i class="far fa-shopping-cart"></i><span class="total-count">0</span></a></div>
+                            <div class="sc-hd-text-container"><a href="#" target="" title="Carts">Cart</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Child nav-->
+        <div class="child-nav child"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Contact Us</strong></div>
+        <!--Child nav-->
+        <h2>Find us Contact Us</h2>
+        <div class="contact-container">
+            <div class="left-con">
+                <input type="text" placeholder="Enter Your Name...">
+                <input type="text" placeholder="Enter Your E-mail...">
+                <input type="text" placeholder="Phone">
+                <textarea cols="5" rows="5" placeholder="Message"></textarea>
+                <button class="btnsmt" type="submit" name="submit">Submit</button>
+            </div>
+            <div class="right-con">
+                <div class="address-con">
+                    <h4><span class="fa fa-phone-square" aria-hidden="true"></span> Phone</h4>
+                    <p>(+855) 96 777 2667</p>
+
+                </div>
+                <div class="address-con">
+                    <h4><span class="fa fa-envelope" aria-hidden="true"></span> Email </h4>
+                    <p><a href="#">sinmonorea.edu@gmail.com</a></p>
+
+                </div>
+
+                <div class="address-con">
+                    <h4><span class="fa fa-map-marker" aria-hidden="true"></span> Location </h4>
+
+                    <p><a href="#">Phnom Penh City</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27404345275!2d-118.69191921441556!3d34.02016130939095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos+Angeles%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1522474296007"
+                allowfullscreen></iframe>
+
+        </div>
+        <!--Footer Block-->
+        <footer class="footer">
+            <div class="foot-left">
+                <h2>
+                    <a href="#">ALIRIKA</a>
+                </h2>
+                <h4>catch on socail</h4>
+                <ul class="social_list">
+
+                    <li>
+                        <a href="#" class="facebook">
+                            <span><i class="fa fa-facebook-f"></i></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="twitter">
+                            <span><i class="fa fa-twitter"></i></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="google">
+                            <span><i class="fa fa-google-plus"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h3>NEWSLETTER</h3>
+                <input type="email" placeholder="Enter your E-mail...">
+                <button class="btn1"><i class="far fa-paper-plane"></i></button>
+
+                <div class="foot-container">
+                    <div class="info">
+                        <h4>INFORMATION</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h4>CUSTOMER SERVICE</h4>
+                        <ul>
+                            <li><a href="#">Delivery & Return</a></li>
+                            <li><a href="#">Waranty</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <h4>CONTACT INFO</h4>
+                        <ul>
+                            <li>PHONE<br> 096 7772667</li>
+                            <li>E-mail<br><a href="#">sinmonorea.edu@gmail.com</a>
+                            </li>
+                            <li>LOCATION<br>
+                                <a href="#">Phnom Penh City</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="copy">
+                    © 2020. All rights reserved | Design by <a href="#"> SIN MONOREA</a>
+
+                </div>
+            </div>
+
+        </footer>
+        <!--End Footer-->
+    </div>
+</body>
+
+</html>
+<script>
+    var btn = $('#gotop');
+
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, '300');
+    });
+</script>
